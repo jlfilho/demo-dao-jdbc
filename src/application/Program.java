@@ -1,6 +1,6 @@
 package application;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,7 +34,7 @@ public class Program {
 				sellerDao.findAll(); for (Seller obj : list) { System.out.println(obj); }
 
 				System.out.println("\n=== TEST 4: seller insert ====="); 
-				Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
+				Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", LocalDate.now(), 4000.0, department);
 				sellerDao.insert(newSeller); System.out.println("Inserted! New id = " +
 						newSeller.getId());
 
